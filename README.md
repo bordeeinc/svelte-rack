@@ -26,7 +26,7 @@ Rack middleware for compiling [Svelte components] to Javascript
 #
 #   # inside Rails::Initializer block
 #   config.middleware.use Rack::Svelte,
-#     #:app_root_dir         => Rails.root.to_s,
+#     :app_root_dir         => Rails.root.to_s,
 #     :components_dir_in    => '/app/components',
 #     :components_dir_out   => '/public/app/js',
 #     :format               => 'iife'
