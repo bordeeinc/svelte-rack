@@ -24,6 +24,8 @@ Gem::Specification.new do |s|
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<svelte-ruby>.freeze, ["~> 0.1"])
+      s.add_runtime_dependency(%q<rack>.freeze, ["~> 2.0"])
       s.add_development_dependency(%q<minitest>.freeze, ["~> 5.10"])
       s.add_development_dependency(%q<hoe-yard>.freeze, [">= 0.1.3"])
       s.add_development_dependency(%q<hoe-ignore>.freeze, ["~> 1.0"])
@@ -34,6 +36,8 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<redcarpet>.freeze, ["~> 3.3"])
       s.add_development_dependency(%q<hoe>.freeze, ["~> 3.16"])
     else
+      s.add_dependency(%q<svelte-ruby>.freeze, ["~> 0.1"])
+      s.add_dependency(%q<rack>.freeze, ["~> 2.0"])
       s.add_dependency(%q<minitest>.freeze, ["~> 5.10"])
       s.add_dependency(%q<hoe-yard>.freeze, [">= 0.1.3"])
       s.add_dependency(%q<hoe-ignore>.freeze, ["~> 1.0"])
@@ -45,6 +49,8 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<hoe>.freeze, ["~> 3.16"])
     end
   else
+    s.add_dependency(%q<svelte-ruby>.freeze, ["~> 0.1"])
+    s.add_dependency(%q<rack>.freeze, ["~> 2.0"])
     s.add_dependency(%q<minitest>.freeze, ["~> 5.10"])
     s.add_dependency(%q<hoe-yard>.freeze, [">= 0.1.3"])
     s.add_dependency(%q<hoe-ignore>.freeze, ["~> 1.0"])

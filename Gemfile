@@ -4,6 +4,8 @@
 
 source "https://rubygems.org/"
 
+gem "svelte-ruby", "~>0.1"
+gem "rack", "~>2.0"
 
 gem "minitest", "~>5.10", :group => [:development, :test]
 gem "hoe-yard", ">=0.1.3", :group => [:development, :test]

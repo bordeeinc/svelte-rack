@@ -31,12 +31,10 @@ Hoe.spec "svelte-rack" do
   self.yard_title           = self.name
   self.yard_markup          = 'markdown'
 
-  if Object.const_defined?('Yard')
-    self.extra_deps += [
-      ['svelte-ruby',               '~> 0.1'],
-      ['rack',                      '~> 2.0']
-    ]
-  end
+  self.extra_deps += [
+    ['svelte-ruby',               '~> 0.1'],
+    ['rack',                      '~> 2.0']
+  ]
 
   self.extra_dev_deps += [
     ["hoe-yard",                  "~> 0.1"],
