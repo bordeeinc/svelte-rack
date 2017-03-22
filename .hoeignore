@@ -1,0 +1,12 @@
+Gemfile.lock
+.ruby-version
+
+.git/*
+
+*.sw?
+.*.sw?
+**/*.sw?
+**/.*.sw?
+
+.DS_Store
+**/.DS_Store
