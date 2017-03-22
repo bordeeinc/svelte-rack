@@ -3,6 +3,8 @@
 Rack middleware for compiling [Svelte components] to Javascript
 
   [Svelte components]: https://svelte.technology
+  
+[![Gem Version](https://badge.fury.io/rb/svelte-rack.svg)](https://badge.fury.io/rb/svelte-rack)
 
 
 ## Usage
