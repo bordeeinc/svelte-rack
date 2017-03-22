@@ -34,6 +34,18 @@ describe "Rack::Svelte" do
       act = IO.read(@hello_world_test_js)
       assert_equal exp, act
     end
+
+    it "should compile with iife" do
+      assert File.exist?(@hello_world_test_html)
+      refute File.exist?(@hello_world_test_js)
+
+      get_response('/', '<!--BODY-->', 'text/html', @options.merge(format: 'iife'))
+      assert File.exist? @hello_world_test_js
+
+      exp = @hello_world_output_iife
+      act = IO.read(@hello_world_test_js)
+      assert_equal exp, act
+    end
   end
 
   after do

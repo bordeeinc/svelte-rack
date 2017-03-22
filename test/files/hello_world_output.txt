@@ -27,7 +27,7 @@ function renderMainFragment ( root, component ) {
 	};
 }
 
-function SvelteComponent ( options ) {
+function hello_world ( options ) {
 	options = options || {};
 	this._state = options.data || {};
 	
@@ -47,14 +47,14 @@ function SvelteComponent ( options ) {
 	if ( options.target ) this._fragment.mount( options.target, null );
 }
 
-SvelteComponent.prototype.get = get;
-SvelteComponent.prototype.fire = fire;
-SvelteComponent.prototype.observe = observe;
-SvelteComponent.prototype.on = on;
-SvelteComponent.prototype.set = set;
-SvelteComponent.prototype._flush = _flush;
+hello_world.prototype.get = get;
+hello_world.prototype.fire = fire;
+hello_world.prototype.observe = observe;
+hello_world.prototype.on = on;
+hello_world.prototype.set = set;
+hello_world.prototype._flush = _flush;
 
-SvelteComponent.prototype._set = function _set ( newState ) {
+hello_world.prototype._set = function _set ( newState ) {
 	var oldState = this._state;
 	this._state = Object.assign( {}, oldState, newState );
 	
@@ -63,7 +63,7 @@ SvelteComponent.prototype._set = function _set ( newState ) {
 	dispatchObservers( this, this._observers.post, newState, oldState );
 };
 
-SvelteComponent.prototype.teardown = SvelteComponent.prototype.destroy = function destroy ( detach ) {
+hello_world.prototype.teardown = hello_world.prototype.destroy = function destroy ( detach ) {
 	this.fire( 'destroy' );
 
 	this._fragment.teardown( detach !== false );
@@ -176,4 +176,4 @@ function _flush() {
 	}
 }
 
-export default SvelteComponent;
+export default hello_world;

@@ -10,27 +10,37 @@ Rack middleware for compiling [Svelte components] to Javascript
 ## Usage
 
 ```
-# Within a rackup file (or with Rack::Builder):
+# @example Within a rackup file (or with Rack::Builder)
 #   require 'rack/svelte'
 #   use Rack::Svelte,
-#     #:app_root_dir         => ::File.expand_path('..', __FILE__),
-#     :app_root_dir         => Rack::Directory.new('').root,
-#     :components_dir_in    => '/app/components',
-#     :components_dir_out   => '/public/app/js',
-#     :format               => 'iife'
+#     #app_root_dir:              Rack::Directory.new('').root,
+#     app_root_dir:               ::File.expand_path(File.dirname(__FILE__)),
+#     components_dir_in:          '/app/components',
+#     components_dir_out:         '/public/app/js',
+#     default_dir_out_overwrite:  false,
+#     default_dir_out_clear:      false,
+#     format:                     'iife'
 #   run app
 #
-# Rails example:
+# @example Rails example
 #   # above Rails::Initializer block
 #   require 'rack/svelte'
 #
 #   # inside Rails::Initializer block
 #   config.middleware.use Rack::Svelte,
-#     :app_root_dir         => Rails.root.to_s,
-#     :components_dir_in    => '/app/components',
-#     :components_dir_out   => '/public/app/js',
-#     :format               => 'iife'
-
+#     app_root_dir:               Rails.root.to_s,
+#     components_dir_in:          '/app/components',
+#     components_dir_out:         '/public/app/js',
+#     default_dir_out_overwrite:  false,
+#     default_dir_out_clear:      false,
+#     format:                     'iife'
+#
+# Default svelte-rack options are:
+#   default_root:               '/'
+#   default_components_in:      '/app/components'
+#   default_components_out:     '/public/app/js'
+#   default_dir_out_overwrite:  false
+#   default_dir_out_clear:      false
 ```
 
 ## Installation
