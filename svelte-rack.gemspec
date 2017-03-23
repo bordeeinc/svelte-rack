@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
-# stub: svelte-rack 0.1.2 ruby lib
+# stub: svelte-rack 0.1.4 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "svelte-rack".freeze
-  s.version = "0.1.2"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["So Awesome Man".freeze]
-  s.date = "2017-03-22"
+  s.date = "2017-03-23"
   s.description = "Rack middleware to render Svelte components to Javascript".freeze
   s.email = "support@bordee.com".freeze
   s.extra_rdoc_files = ["History.txt".freeze, "Manifest.txt".freeze, "README.md".freeze, "History.txt".freeze]
