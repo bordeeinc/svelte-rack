@@ -32,7 +32,7 @@ module Rack::Svelte
       raise "ERROR: Dir In cannot be found: #{dir_in}" unless Dir.exist? dir_in
       raise "ERROR: Dir Out cannot be found: #{dir_out}" unless Dir.exist? dir_out
 
-      FileUtils.rm File.join(dir_out, '*') if @dir_out_clear
+      FileUtils.rm_rf(Dir.glob(File.join(dir_out, '*'))) if @dir_out_clear
 
       Dir.glob(File.join(dir_in, '**/*')).each do |filename_in|
         # only html components
